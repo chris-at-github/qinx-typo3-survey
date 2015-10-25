@@ -79,7 +79,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-
+		'sortby' => 'sorting',
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 

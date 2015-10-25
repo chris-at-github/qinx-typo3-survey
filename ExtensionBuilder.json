@@ -141,7 +141,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
-                    "sorting": false,
+                    "sorting": true,
                     "type": "Entity",
                     "uid": "1024088893233"
                 },
@@ -252,7 +252,7 @@
         },
         "extensionKey": "qxsurvey",
         "name": "Qinx Survey",
-        "originalExtensionKey": "",
+        "originalExtensionKey": "qxsurvey",
         "persons": [
             {
                 "company": "",
@@ -313,7 +313,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-10-25 08:32",
+        "last_modified": "2015-10-25 08:47",
         "extension_builder_version": "6.2.0",
         "be_user": " (1)"
     }

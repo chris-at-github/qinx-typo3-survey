@@ -119,6 +119,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 					'levelLinksPosition' => 'top',
 					'showSynchronizationLink' => 1,
 					'showPossibleLocalizationRecords' => 1,
+					'useSortable' => 1,
 					'showAllLocalizationLink' => 1
 				),
 			),
