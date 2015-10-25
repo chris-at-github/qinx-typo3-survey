@@ -51,11 +51,14 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 
 	/**
 	 * action save
-	 * 
+	 *
+	 * @param \Qinx\Qxsurvey\Domain\Model\Question $question
+	 * @param \Qinx\Qxsurvey\Domain\Model\Option $option
+	 * @param \Qinx\Qxsurvey\Domain\Model\User $user
 	 * @return void
 	 */
-	public function saveAction() {
-		
+	public function saveAction(\Qinx\Qxsurvey\Domain\Model\Question $question, \Qinx\Qxsurvey\Domain\Model\Option $option, \Qinx\Qxsurvey\Domain\Model\User $user) {
+		var_dump($question, $option, $user);
 	}
 
 }

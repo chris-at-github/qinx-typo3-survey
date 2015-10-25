@@ -1,5 +1,32 @@
-<f:layout name="Default"/>
+<f:layout name="Default" />
 
 <f:section name="Main">
-	...
+	<f:if condition="{question}">
+		<f:form action="save" name="question" object="{question}">
+
+			<div class="form-item">
+				<label class="form-label" for="qx-survey-{question.uid}-email">E-Mail:</label>
+				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value=""/>
+			</div>
+
+			<f:for each="{question.options}" as="option">
+
+				<div class="form-item">
+					<f:form.radio name="option" value="{option.uid}" id="qx-survey-{question.uid}-{option.value}"/>
+					<label for="qx-survey-{question.uid}-{option.value}">{option.name}</label>
+				</div>
+
+			</f:for>
+
+			<div class="form-actions">
+				<button type="submit">Abschicken</button>
+			</div>
+		</f:form>
+	</f:if>
+</f:section>
+
+<f:section name="dfsf">
+
+
+
 </f:section>
