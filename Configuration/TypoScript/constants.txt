@@ -1,0 +1,15 @@
+
+plugin.tx_qxsurvey {
+	view {
+		# cat=plugin.tx_qxsurvey/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:qxsurvey/Resources/Private/Templates/
+		# cat=plugin.tx_qxsurvey/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:qxsurvey/Resources/Private/Partials/
+		# cat=plugin.tx_qxsurvey/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:qxsurvey/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_qxsurvey//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
