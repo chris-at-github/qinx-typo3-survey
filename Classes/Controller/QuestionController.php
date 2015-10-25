@@ -46,7 +46,7 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function indexAction() {
-		
+		$this->view->assign('question', $this->questionRepository->findByUid(1));
 	}
 
 	/**
