@@ -1,0 +1,24 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<label>LLL:EXT:fc_products/Resources/Private/Language/locallang_db.xlf:flexform.pi1.view</label>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.category>
+						<TCEforms>
+							<label>LLL:EXT:fc_products/Resources/Private/Language/locallang_db.xlf:flexform.pi1.category</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<itemsProcFunc>Fc\FcProducts\Utility\FlexformUtility->getCategories</itemsProcFunc>
+							</config>
+						</TCEforms>
+					</settings.category>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
