@@ -41,12 +41,12 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $name = '';
 
 	/**
-	 * options
+	 * choises
 	 * 
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Option>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice>
 	 * @cascade remove
 	 */
-	protected $options = NULL;
+	protected $choises = NULL;
 
 	/**
 	 * __construct
@@ -65,7 +65,7 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->options = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->choises = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -88,42 +88,42 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Adds a Option
+	 * Adds a Choice
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Option $option
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choise
 	 * @return void
 	 */
-	public function addOption(\Qinx\Qxsurvey\Domain\Model\Option $option) {
-		$this->options->attach($option);
+	public function addChoise(\Qinx\Qxsurvey\Domain\Model\Choice $choise) {
+		$this->choises->attach($choise);
 	}
 
 	/**
-	 * Removes a Option
+	 * Removes a Choice
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Option $optionToRemove The Option to be removed
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choiseToRemove The Choice to be removed
 	 * @return void
 	 */
-	public function removeOption(\Qinx\Qxsurvey\Domain\Model\Option $optionToRemove) {
-		$this->options->detach($optionToRemove);
+	public function removeChoise(\Qinx\Qxsurvey\Domain\Model\Choice $choiseToRemove) {
+		$this->choises->detach($choiseToRemove);
 	}
 
 	/**
-	 * Returns the options
+	 * Returns the choises
 	 * 
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Option> $options
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choises
 	 */
-	public function getOptions() {
-		return $this->options;
+	public function getChoises() {
+		return $this->choises;
 	}
 
 	/**
-	 * Sets the options
+	 * Sets the choises
 	 * 
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Option> $options
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choises
 	 * @return void
 	 */
-	public function setOptions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $options) {
-		$this->options = $options;
+	public function setChoises(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $choises) {
+		$this->choises = $choises;
 	}
 
 }

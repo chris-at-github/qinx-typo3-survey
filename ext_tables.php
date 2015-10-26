@@ -34,7 +34,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,options,',
+		'searchFields' => 'name,choises,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Question.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_question.gif'
 	),
@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 $GLOBALS['TCA']['tx_qxsurvey_domain_model_answer'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_answer',
-		'label' => 'tx_qxsurvey_option',
+		'label' => 'choice',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -63,17 +63,17 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_answer'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'tx_qxsurvey_option,question,user,',
+		'searchFields' => 'choice,question,user,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Answer.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_answer.gif'
 	),
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_qxsurvey_domain_model_option', 'EXT:qxsurvey/Resources/Private/Language/locallang_csh_tx_qxsurvey_domain_model_option.xlf');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_qxsurvey_domain_model_option');
-$GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_qxsurvey_domain_model_choice', 'EXT:qxsurvey/Resources/Private/Language/locallang_csh_tx_qxsurvey_domain_model_choice.xlf');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_qxsurvey_domain_model_choice');
+$GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_option',
+		'title'	=> 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_choice',
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -93,8 +93,8 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'name,value,',
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Option.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_option.gif'
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Choice.php',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_choice.gif'
 	),
 );
 

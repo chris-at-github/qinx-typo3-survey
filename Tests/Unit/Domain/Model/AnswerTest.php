@@ -51,23 +51,23 @@ class AnswerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getOptionReturnsInitialValueForOption() {
+	public function getChoiceReturnsInitialValueForChoice() {
 		$this->assertEquals(
 			NULL,
-			$this->subject->getOption()
+			$this->subject->getChoice()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setOptionForOptionSetsOption() {
-		$optionFixture = new \Qinx\Qxsurvey\Domain\Model\Option();
-		$this->subject->setOption($optionFixture);
+	public function setChoiceForChoiceSetsChoice() {
+		$choiceFixture = new \Qinx\Qxsurvey\Domain\Model\Choice();
+		$this->subject->setChoice($choiceFixture);
 
 		$this->assertAttributeEquals(
-			$optionFixture,
-			'option',
+			$choiceFixture,
+			'choice',
 			$this->subject
 		);
 	}

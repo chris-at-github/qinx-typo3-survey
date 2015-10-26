@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-25T21:42:56Z" product-name="qxsurvey">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-10-26T06:38:05Z" product-name="qxsurvey">
 		<header/>
 		<body>
 			<trans-unit id="tx_qxsurvey_domain_model_question">
@@ -9,14 +9,14 @@
 			<trans-unit id="tx_qxsurvey_domain_model_question.name">
 				<source>Name</source>
 			</trans-unit>
-			<trans-unit id="tx_qxsurvey_domain_model_question.options">
-				<source>Options</source>
+			<trans-unit id="tx_qxsurvey_domain_model_question.choises">
+				<source>Choises</source>
 			</trans-unit>
 			<trans-unit id="tx_qxsurvey_domain_model_answer">
 				<source>Answer</source>
 			</trans-unit>
-			<trans-unit id="tx_qxsurvey_domain_model_answer.tx_qxsurvey_option">
-				<source>Option</source>
+			<trans-unit id="tx_qxsurvey_domain_model_answer.choice">
+				<source>Choice</source>
 			</trans-unit>
 			<trans-unit id="tx_qxsurvey_domain_model_answer.question">
 				<source>Question</source>
@@ -24,13 +24,13 @@
 			<trans-unit id="tx_qxsurvey_domain_model_answer.user">
 				<source>User</source>
 			</trans-unit>
-			<trans-unit id="tx_qxsurvey_domain_model_option">
-				<source>Option</source>
+			<trans-unit id="tx_qxsurvey_domain_model_choice">
+				<source>Choice</source>
 			</trans-unit>
-			<trans-unit id="tx_qxsurvey_domain_model_option.name">
+			<trans-unit id="tx_qxsurvey_domain_model_choice.name">
 				<source>Name</source>
 			</trans-unit>
-			<trans-unit id="tx_qxsurvey_domain_model_option.value">
+			<trans-unit id="tx_qxsurvey_domain_model_choice.value">
 				<source>Value</source>
 			</trans-unit>
 			<trans-unit id="tx_qxsurvey_domain_model_user">
