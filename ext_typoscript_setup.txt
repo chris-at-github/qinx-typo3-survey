@@ -3,7 +3,7 @@ config.tx_extbase{
     persistence{
         classes{
 
-            Qinx\Qxsurvey\Domain\Model\Question {
+            Qinx\Qxsurvey\Domain\Model\Answer {
                 mapping {
                     
                 }

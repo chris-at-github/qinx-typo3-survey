@@ -40,34 +40,6 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $email = '';
 
 	/**
-	 * answer
-	 * 
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Answer>
-	 * @lazy
-	 */
-	protected $answer = NULL;
-
-	/**
-	 * __construct
-	 */
-	public function __construct() {
-		//Do not remove the next line: It would break the functionality
-		$this->initStorageObjects();
-	}
-
-	/**
-	 * Initializes all ObjectStorage properties
-	 * Do not modify this method!
-	 * It will be rewritten on each save in the extension builder
-	 * You may modify the constructor of this class instead
-	 * 
-	 * @return void
-	 */
-	protected function initStorageObjects() {
-		$this->answer = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-	}
-
-	/**
 	 * Returns the email
 	 * 
 	 * @return string $email
@@ -84,45 +56,6 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setEmail($email) {
 		$this->email = $email;
-	}
-
-	/**
-	 * Adds a Answer
-	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Answer $answer
-	 * @return void
-	 */
-	public function addAnswer(\Qinx\Qxsurvey\Domain\Model\Answer $answer) {
-		$this->answer->attach($answer);
-	}
-
-	/**
-	 * Removes a Answer
-	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Answer $answerToRemove The Answer to be removed
-	 * @return void
-	 */
-	public function removeAnswer(\Qinx\Qxsurvey\Domain\Model\Answer $answerToRemove) {
-		$this->answer->detach($answerToRemove);
-	}
-
-	/**
-	 * Returns the answer
-	 * 
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Answer> $answer
-	 */
-	public function getAnswer() {
-		return $this->answer;
-	}
-
-	/**
-	 * Sets the answer
-	 * 
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Answer> $answer
-	 * @return void
-	 */
-	public function setAnswer(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $answer) {
-		$this->answer = $answer;
 	}
 
 }

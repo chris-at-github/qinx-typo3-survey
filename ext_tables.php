@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 $GLOBALS['TCA']['tx_qxsurvey_domain_model_answer'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_answer',
-		'label' => 'options',
+		'label' => 'tx_qxsurvey_option',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -63,7 +63,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_answer'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'options,',
+		'searchFields' => 'tx_qxsurvey_option,question,user,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Answer.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_answer.gif'
 	),
@@ -121,7 +121,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_user'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'email,answer,',
+		'searchFields' => 'email,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/User.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_user.gif'
 	),

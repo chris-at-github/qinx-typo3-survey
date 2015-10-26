@@ -105,10 +105,30 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": false,
                             "relationDescription": "",
-                            "relationName": "options",
+                            "relationName": "option",
                             "relationType": "zeroToOne",
                             "relationWire": "[wired]",
                             "uid": "944559402618"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "",
+                            "relationName": "question",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "uid": "409516531261"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "",
+                            "relationName": "user",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "uid": "1228497374326"
                         }
                     ]
                 }
@@ -220,18 +240,7 @@
                     ]
                 },
                 "relationGroup": {
-                    "relations": [
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": true,
-                            "propertyIsExcludeField": false,
-                            "relationDescription": "",
-                            "relationName": "answer",
-                            "relationType": "manyToMany",
-                            "relationWire": "[wired]",
-                            "uid": "433064939302"
-                        }
-                    ]
+                    "relations": []
                 }
             }
         }
@@ -301,19 +310,31 @@
         },
         {
             "src": {
-                "moduleId": 3,
-                "terminal": "relationWire_0",
-                "uid": "433064939302"
+                "moduleId": 1,
+                "terminal": "relationWire_1",
+                "uid": "409516531261"
             },
             "tgt": {
-                "moduleId": 1,
+                "moduleId": 0,
                 "terminal": "SOURCES",
-                "uid": "142692067640"
+                "uid": "300611896637"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 1,
+                "terminal": "relationWire_2",
+                "uid": "1228497374326"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "486024324995"
             }
         }
     ],
     "log": {
-        "last_modified": "2015-10-25 08:47",
+        "last_modified": "2015-10-25 09:42",
         "extension_builder_version": "6.2.0",
         "be_user": " (1)"
     }

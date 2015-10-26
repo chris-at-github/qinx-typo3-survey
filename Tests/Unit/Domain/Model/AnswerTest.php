@@ -51,23 +51,71 @@ class AnswerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getOptionsReturnsInitialValueForOption() {
+	public function getOptionReturnsInitialValueForOption() {
 		$this->assertEquals(
 			NULL,
-			$this->subject->getOptions()
+			$this->subject->getOption()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setOptionsForOptionSetsOptions() {
-		$optionsFixture = new \Qinx\Qxsurvey\Domain\Model\Option();
-		$this->subject->setOptions($optionsFixture);
+	public function setOptionForOptionSetsOption() {
+		$optionFixture = new \Qinx\Qxsurvey\Domain\Model\Option();
+		$this->subject->setOption($optionFixture);
 
 		$this->assertAttributeEquals(
-			$optionsFixture,
-			'options',
+			$optionFixture,
+			'option',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getQuestionReturnsInitialValueForQuestion() {
+		$this->assertEquals(
+			NULL,
+			$this->subject->getQuestion()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setQuestionForQuestionSetsQuestion() {
+		$questionFixture = new \Qinx\Qxsurvey\Domain\Model\Question();
+		$this->subject->setQuestion($questionFixture);
+
+		$this->assertAttributeEquals(
+			$questionFixture,
+			'question',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getUserReturnsInitialValueForUser() {
+		$this->assertEquals(
+			NULL,
+			$this->subject->getUser()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setUserForUserSetsUser() {
+		$userFixture = new \Qinx\Qxsurvey\Domain\Model\User();
+		$this->subject->setUser($userFixture);
+
+		$this->assertAttributeEquals(
+			$userFixture,
+			'user',
 			$this->subject
 		);
 	}

@@ -33,30 +33,84 @@ namespace Qinx\Qxsurvey\Domain\Model;
 class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * options
+	 * option
 	 * 
 	 * @var \Qinx\Qxsurvey\Domain\Model\Option
 	 * @lazy
 	 */
-	protected $options = NULL;
+	protected $option = NULL;
 
 	/**
-	 * Returns the options
+	 * question
 	 * 
-	 * @return \Qinx\Qxsurvey\Domain\Model\Option $options
+	 * @var \Qinx\Qxsurvey\Domain\Model\Question
+	 * @lazy
 	 */
-	public function getOptions() {
-		return $this->options;
+	protected $question = NULL;
+
+	/**
+	 * user
+	 * 
+	 * @var \Qinx\Qxsurvey\Domain\Model\User
+	 * @lazy
+	 */
+	protected $user = NULL;
+
+	/**
+	 * Returns the option
+	 * 
+	 * @return \Qinx\Qxsurvey\Domain\Model\Option $option
+	 */
+	public function getOption() {
+		return $this->option;
 	}
 
 	/**
-	 * Sets the options
+	 * Sets the option
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Option $options
+	 * @param \Qinx\Qxsurvey\Domain\Model\Option $option
 	 * @return void
 	 */
-	public function setOptions(\Qinx\Qxsurvey\Domain\Model\Option $options) {
-		$this->options = $options;
+	public function setOption(\Qinx\Qxsurvey\Domain\Model\Option $option) {
+		$this->option = $option;
+	}
+
+	/**
+	 * Returns the question
+	 * 
+	 * @return \Qinx\Qxsurvey\Domain\Model\Question $question
+	 */
+	public function getQuestion() {
+		return $this->question;
+	}
+
+	/**
+	 * Sets the question
+	 * 
+	 * @param \Qinx\Qxsurvey\Domain\Model\Question $question
+	 * @return void
+	 */
+	public function setQuestion(\Qinx\Qxsurvey\Domain\Model\Question $question) {
+		$this->question = $question;
+	}
+
+	/**
+	 * Returns the user
+	 * 
+	 * @return \Qinx\Qxsurvey\Domain\Model\User $user
+	 */
+	public function getUser() {
+		return $this->user;
+	}
+
+	/**
+	 * Sets the user
+	 * 
+	 * @param \Qinx\Qxsurvey\Domain\Model\User $user
+	 * @return void
+	 */
+	public function setUser(\Qinx\Qxsurvey\Domain\Model\User $user) {
+		$this->user = $user;
 	}
 
 }

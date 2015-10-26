@@ -47,7 +47,9 @@ CREATE TABLE tx_qxsurvey_domain_model_answer (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	options int(11) unsigned DEFAULT '0',
+	tx_qxsurvey_option int(11) unsigned DEFAULT '0',
+	question int(11) unsigned DEFAULT '0',
+	user int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -131,7 +133,6 @@ CREATE TABLE tx_qxsurvey_domain_model_user (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	email varchar(255) DEFAULT '' NOT NULL,
-	answer int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -169,17 +170,4 @@ CREATE TABLE tx_qxsurvey_domain_model_option (
 
 	question  int(11) unsigned DEFAULT '0' NOT NULL,
 
-);
-
-#
-# Table structure for table 'tx_qxsurvey_user_answer_mm'
-#
-CREATE TABLE tx_qxsurvey_user_answer_mm (
-	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-
-	KEY uid_local (uid_local),
-	KEY uid_foreign (uid_foreign)
 );
