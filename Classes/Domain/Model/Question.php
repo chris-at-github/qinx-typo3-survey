@@ -41,12 +41,12 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $name = '';
 
 	/**
-	 * choises
+	 * choices
 	 * 
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice>
 	 * @cascade remove
 	 */
-	protected $choises = NULL;
+	protected $choices = NULL;
 
 	/**
 	 * __construct
@@ -65,7 +65,7 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->choises = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->choices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -90,40 +90,40 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a Choice
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choise
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choice
 	 * @return void
 	 */
-	public function addChoise(\Qinx\Qxsurvey\Domain\Model\Choice $choise) {
-		$this->choises->attach($choise);
+	public function addChoice(\Qinx\Qxsurvey\Domain\Model\Choice $choice) {
+		$this->choices->attach($choice);
 	}
 
 	/**
 	 * Removes a Choice
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choiseToRemove The Choice to be removed
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choiceToRemove The Choice to be removed
 	 * @return void
 	 */
-	public function removeChoise(\Qinx\Qxsurvey\Domain\Model\Choice $choiseToRemove) {
-		$this->choises->detach($choiseToRemove);
+	public function removeChoice(\Qinx\Qxsurvey\Domain\Model\Choice $choiceToRemove) {
+		$this->choices->detach($choiceToRemove);
 	}
 
 	/**
-	 * Returns the choises
+	 * Returns the choices
 	 * 
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choises
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choices
 	 */
-	public function getChoises() {
-		return $this->choises;
+	public function getChoices() {
+		return $this->choices;
 	}
 
 	/**
-	 * Sets the choises
+	 * Sets the choices
 	 * 
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choises
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Qinx\Qxsurvey\Domain\Model\Choice> $choices
 	 * @return void
 	 */
-	public function setChoises(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $choises) {
-		$this->choises = $choises;
+	public function setChoices(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $choices) {
+		$this->choices = $choices;
 	}
 
 }

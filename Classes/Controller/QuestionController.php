@@ -65,8 +65,6 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$answer->setChoice($choice);
 		$answer->setUser($user);
 
-		var_dump($answer);
-//
-//		$repository->add($answer);
+		$repository->add($answer);
  }
 }

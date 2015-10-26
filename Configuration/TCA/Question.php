@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_qxsurvey_domain_model_question']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, choises',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, choices',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, choises, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, choices, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -106,9 +106,9 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 				'eval' => 'trim,required'
 			),
 		),
-		'choises' => array(
+		'choices' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_question.choises',
+			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_question.choices',
 			'config' => array(
 				'type' => 'inline',
 				'foreign_table' => 'tx_qxsurvey_domain_model_choice',

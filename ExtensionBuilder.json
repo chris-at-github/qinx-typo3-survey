@@ -55,7 +55,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "choises",
+                            "relationName": "choices",
                             "relationType": "zeroToMany",
                             "relationWire": "[wired]",
                             "uid": "559708934131"
@@ -334,7 +334,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-10-26 06:38",
+        "last_modified": "2015-10-26 06:51",
         "extension_builder_version": "6.2.0",
         "be_user": " (1)"
     }

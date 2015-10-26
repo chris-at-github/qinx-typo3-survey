@@ -74,26 +74,26 @@ class QuestionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getChoisesReturnsInitialValueForChoice() {
+	public function getChoicesReturnsInitialValueForChoice() {
 		$newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
-			$this->subject->getChoises()
+			$this->subject->getChoices()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setChoisesForObjectStorageContainingChoiceSetsChoises() {
-		$choise = new \Qinx\Qxsurvey\Domain\Model\Choice();
-		$objectStorageHoldingExactlyOneChoises = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-		$objectStorageHoldingExactlyOneChoises->attach($choise);
-		$this->subject->setChoises($objectStorageHoldingExactlyOneChoises);
+	public function setChoicesForObjectStorageContainingChoiceSetsChoices() {
+		$choice = new \Qinx\Qxsurvey\Domain\Model\Choice();
+		$objectStorageHoldingExactlyOneChoices = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$objectStorageHoldingExactlyOneChoices->attach($choice);
+		$this->subject->setChoices($objectStorageHoldingExactlyOneChoices);
 
 		$this->assertAttributeEquals(
-			$objectStorageHoldingExactlyOneChoises,
-			'choises',
+			$objectStorageHoldingExactlyOneChoices,
+			'choices',
 			$this->subject
 		);
 	}
@@ -101,25 +101,25 @@ class QuestionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function addChoiseToObjectStorageHoldingChoises() {
-		$choise = new \Qinx\Qxsurvey\Domain\Model\Choice();
-		$choisesObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('attach'), array(), '', FALSE);
-		$choisesObjectStorageMock->expects($this->once())->method('attach')->with($this->equalTo($choise));
-		$this->inject($this->subject, 'choises', $choisesObjectStorageMock);
+	public function addChoiceToObjectStorageHoldingChoices() {
+		$choice = new \Qinx\Qxsurvey\Domain\Model\Choice();
+		$choicesObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('attach'), array(), '', FALSE);
+		$choicesObjectStorageMock->expects($this->once())->method('attach')->with($this->equalTo($choice));
+		$this->inject($this->subject, 'choices', $choicesObjectStorageMock);
 
-		$this->subject->addChoise($choise);
+		$this->subject->addChoice($choice);
 	}
 
 	/**
 	 * @test
 	 */
-	public function removeChoiseFromObjectStorageHoldingChoises() {
-		$choise = new \Qinx\Qxsurvey\Domain\Model\Choice();
-		$choisesObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('detach'), array(), '', FALSE);
-		$choisesObjectStorageMock->expects($this->once())->method('detach')->with($this->equalTo($choise));
-		$this->inject($this->subject, 'choises', $choisesObjectStorageMock);
+	public function removeChoiceFromObjectStorageHoldingChoices() {
+		$choice = new \Qinx\Qxsurvey\Domain\Model\Choice();
+		$choicesObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('detach'), array(), '', FALSE);
+		$choicesObjectStorageMock->expects($this->once())->method('detach')->with($this->equalTo($choice));
+		$this->inject($this->subject, 'choices', $choicesObjectStorageMock);
 
-		$this->subject->removeChoise($choise);
+		$this->subject->removeChoice($choice);
 
 	}
 }

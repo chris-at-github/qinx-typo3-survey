@@ -7,7 +7,7 @@ CREATE TABLE tx_qxsurvey_domain_model_question (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	choises int(11) unsigned DEFAULT '0' NOT NULL,
+	choices int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
