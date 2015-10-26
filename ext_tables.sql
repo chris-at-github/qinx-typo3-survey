@@ -7,7 +7,7 @@ CREATE TABLE tx_qxsurvey_domain_model_question (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	options int(11) unsigned DEFAULT '0' NOT NULL,
+	choises int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE tx_qxsurvey_domain_model_answer (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	tx_qxsurvey_option int(11) unsigned DEFAULT '0',
+	choice int(11) unsigned DEFAULT '0',
 	question int(11) unsigned DEFAULT '0',
 	user int(11) unsigned DEFAULT '0',
 
@@ -82,9 +82,9 @@ CREATE TABLE tx_qxsurvey_domain_model_answer (
 );
 
 #
-# Table structure for table 'tx_qxsurvey_domain_model_option'
+# Table structure for table 'tx_qxsurvey_domain_model_choice'
 #
-CREATE TABLE tx_qxsurvey_domain_model_option (
+CREATE TABLE tx_qxsurvey_domain_model_choice (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -164,9 +164,9 @@ CREATE TABLE tx_qxsurvey_domain_model_user (
 );
 
 #
-# Table structure for table 'tx_qxsurvey_domain_model_option'
+# Table structure for table 'tx_qxsurvey_domain_model_choice'
 #
-CREATE TABLE tx_qxsurvey_domain_model_option (
+CREATE TABLE tx_qxsurvey_domain_model_choice (
 
 	question  int(11) unsigned DEFAULT '0' NOT NULL,
 

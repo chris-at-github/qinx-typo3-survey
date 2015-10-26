@@ -33,12 +33,12 @@ namespace Qinx\Qxsurvey\Domain\Model;
 class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * option
+	 * choice
 	 * 
-	 * @var \Qinx\Qxsurvey\Domain\Model\Option
+	 * @var \Qinx\Qxsurvey\Domain\Model\Choice
 	 * @lazy
 	 */
-	protected $option = NULL;
+	protected $choice = NULL;
 
 	/**
 	 * question
@@ -57,22 +57,22 @@ class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $user = NULL;
 
 	/**
-	 * Returns the option
+	 * Returns the choice
 	 * 
-	 * @return \Qinx\Qxsurvey\Domain\Model\Option $option
+	 * @return \Qinx\Qxsurvey\Domain\Model\Choice $choice
 	 */
-	public function getOption() {
-		return $this->option;
+	public function getChoice() {
+		return $this->choice;
 	}
 
 	/**
-	 * Sets the option
+	 * Sets the choice
 	 * 
-	 * @param \Qinx\Qxsurvey\Domain\Model\Option $option
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choice
 	 * @return void
 	 */
-	public function setOption(\Qinx\Qxsurvey\Domain\Model\Option $option) {
-		$this->option = $option;
+	public function setChoice(\Qinx\Qxsurvey\Domain\Model\Choice $choice) {
+		$this->choice = $choice;
 	}
 
 	/**

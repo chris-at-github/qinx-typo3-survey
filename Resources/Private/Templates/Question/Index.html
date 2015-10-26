@@ -9,11 +9,11 @@
 				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value=""/>
 			</div>
 
-			<f:for each="{question.options}" as="option">
+			<f:for each="{question.choices}" as="choice">
 
 				<div class="form-item">
-					<f:form.radio name="option" value="{option.uid}" id="qx-survey-{question.uid}-{option.value}"/>
-					<label for="qx-survey-{question.uid}-{option.value}">{option.name}</label>
+					<f:form.radio name="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.value}"/>
+					<label for="qx-survey-{question.uid}-{choice.value}">{choice.name}</label>
 				</div>
 
 			</f:for>
@@ -23,10 +23,6 @@
 			</div>
 		</f:form>
 	</f:if>
-</f:section>
 
-<f:section name="dfsf">
-
-
-
+	<f:debug>{question}</f:debug>
 </f:section>

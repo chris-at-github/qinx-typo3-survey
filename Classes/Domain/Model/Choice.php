@@ -28,9 +28,9 @@ namespace Qinx\Qxsurvey\Domain\Model;
  ***************************************************************/
 
 /**
- * Option
+ * Choice
  */
-class Option extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * name

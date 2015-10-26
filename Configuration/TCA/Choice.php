@@ -3,8 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
-	'ctrl' => $GLOBALS['TCA']['tx_qxsurvey_domain_model_option']['ctrl'],
+$GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
+	'ctrl' => $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice']['ctrl'],
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, value',
 	),
@@ -38,8 +38,8 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_qxsurvey_domain_model_option',
-				'foreign_table_where' => 'AND tx_qxsurvey_domain_model_option.pid=###CURRENT_PID### AND tx_qxsurvey_domain_model_option.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_qxsurvey_domain_model_choice',
+				'foreign_table_where' => 'AND tx_qxsurvey_domain_model_choice.pid=###CURRENT_PID### AND tx_qxsurvey_domain_model_choice.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -99,7 +99,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
 
 		'name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_option.name',
+			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_choice.name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -108,7 +108,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_option'] = array(
 		),
 		'value' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_option.value',
+			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_choice.value',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

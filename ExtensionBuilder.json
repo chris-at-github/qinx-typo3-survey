@@ -55,7 +55,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "options",
+                            "relationName": "choises",
                             "relationType": "zeroToMany",
                             "relationWire": "[wired]",
                             "uid": "559708934131"
@@ -105,8 +105,8 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": false,
                             "relationDescription": "",
-                            "relationName": "option",
-                            "relationType": "zeroToOne",
+                            "relationName": "choice",
+                            "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "uid": "944559402618"
                         },
@@ -116,7 +116,7 @@
                             "propertyIsExcludeField": false,
                             "relationDescription": "",
                             "relationName": "question",
-                            "relationType": "zeroToOne",
+                            "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "uid": "409516531261"
                         },
@@ -137,8 +137,8 @@
         {
             "config": {
                 "position": [
-                    300,
-                    99
+                    324,
+                    286
                 ]
             },
             "name": "New Model Object",
@@ -151,7 +151,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "Option",
+                "name": "Choice",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -334,7 +334,7 @@
         }
     ],
     "log": {
-        "last_modified": "2015-10-25 09:42",
+        "last_modified": "2015-10-26 06:38",
         "extension_builder_version": "6.2.0",
         "be_user": " (1)"
     }
