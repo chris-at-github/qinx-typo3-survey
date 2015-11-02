@@ -40,12 +40,11 @@ class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $name = '';
 
 	/**
-	 * value
+	 * namespace
 	 * 
 	 * @var string
-	 * @validate NotEmpty
 	 */
-	protected $value = '';
+	protected $namespace = '';
 
 	/**
 	 * Returns the name
@@ -67,22 +66,22 @@ class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the value
+	 * Returns the namespace
 	 * 
-	 * @return string $value
+	 * @return string $namespace
 	 */
-	public function getValue() {
-		return $this->value;
+	public function getNamespace() {
+		return $this->namespace;
 	}
 
 	/**
-	 * Sets the value
+	 * Sets the namespace
 	 * 
-	 * @param string $value
+	 * @param string $namespace
 	 * @return void
 	 */
-	public function setValue($value) {
-		$this->value = $value;
+	public function setNamespace($namespace) {
+		$this->namespace = $namespace;
 	}
 
 }

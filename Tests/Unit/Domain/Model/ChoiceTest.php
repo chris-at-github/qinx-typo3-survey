@@ -74,22 +74,22 @@ class ChoiceTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
-	public function getValueReturnsInitialValueForString() {
+	public function getNamespaceReturnsInitialValueForString() {
 		$this->assertSame(
 			'',
-			$this->subject->getValue()
+			$this->subject->getNamespace()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setValueForStringSetsValue() {
-		$this->subject->setValue('Conceived at T3CON10');
+	public function setNamespaceForStringSetsNamespace() {
+		$this->subject->setNamespace('Conceived at T3CON10');
 
 		$this->assertAttributeEquals(
 			'Conceived at T3CON10',
-			'value',
+			'namespace',
 			$this->subject
 		);
 	}

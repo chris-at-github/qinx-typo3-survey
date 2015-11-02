@@ -12,8 +12,8 @@
 			<f:for each="{question.choices}" as="choice">
 
 				<div class="form-item">
-					<f:form.radio name="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.value}"/>
-					<label for="qx-survey-{question.uid}-{choice.value}">{choice.name}</label>
+					<f:form.radio name="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
+					<label for="qx-survey-{question.uid}-{choice.namespace}">{choice.name}</label>
 				</div>
 
 			</f:for>

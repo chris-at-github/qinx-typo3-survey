@@ -182,8 +182,8 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": false,
-                            "propertyIsRequired": true,
-                            "propertyName": "value",
+                            "propertyIsRequired": false,
+                            "propertyName": "namespace",
                             "propertyType": "String",
                             "uid": "657929040120"
                         }
@@ -334,8 +334,8 @@
         }
     ],
     "log": {
-        "last_modified": "2015-10-26 06:51",
+        "last_modified": "2015-11-02 11:29",
         "extension_builder_version": "6.2.0",
-        "be_user": " (1)"
+        "be_user": "Christian Pschorr (1)"
     }
 }
