@@ -1,5 +1,5 @@
 <?php
-namespace Fc\FcProducts\Utility;
+namespace Qinx\Qxsurvey\Utilities;
 
 	/***************************************************************
 	 *  Copyright notice
@@ -33,55 +33,16 @@ namespace Fc\FcProducts\Utility;
  *
  */
 class FlexformUtility {
-	public function getCategories($config, $parent) {
+	public function getQuestions($config, $parent) {
 		$config['items'] = array(
 			array(0 => '', 1 => 0)
 		);
 
-		$result	= $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid, name', 'tx_fcproducts_domain_model_category');
+		$result	= $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid, name', 'tx_qxsurvey_domain_model_question');
 
 		if($GLOBALS['TYPO3_DB']->sql_num_rows($result)) {
 			while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($result)){
 				$config['items'][] = array(0 => $row['name'], 1 => $row['uid']);
-			}
-		}
-
-		return $config;
-	}
-
-	public function getGroupAttribute($config, $parent) {
-		$config['items'] = array(
-			array(0 => '', 1 => 0)
-		);
-		return $this->getCategoryAttributes($config, $parent);
-	}
-
-	public function getSortedAttributes($config, $parent) {
-		return $this->getCategoryAttributes($config, $parent);
-	}
-
-	protected function getCategoryAttributes($config, $parent) {
-		if(is_array($config['items']) === false) {
-			$config['items'] = array();
-		}
-
-		if(isset($config['row']['pi_flexform']) === true) {
-			$category = $this->getFlexformValue($config['row']['pi_flexform'], 'settings.category');
-		}
-
-		if(empty($category) === false) {
-			$result	= $GLOBALS['TYPO3_DB']->exec_SELECTquery(
-				'a.uid, a.name',
-				'tx_fcproducts_domain_model_attribute AS a
-					JOIN tx_fcproducts_category_attribute_mm AS mm ON a.uid = mm.uid_foreign
-					JOIN tx_fcproducts_domain_model_category AS c ON c.uid = mm.uid_local',
-				'a.sys_language_uid = 0 AND c.uid = ' . (int) $category
-			);
-
-			if($GLOBALS['TYPO3_DB']->sql_num_rows($result)) {
-				while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($result)) {
-					$config['items'][] = array(0 => $row['name'], 1 => $row['uid']);
-				}
 			}
 		}
 

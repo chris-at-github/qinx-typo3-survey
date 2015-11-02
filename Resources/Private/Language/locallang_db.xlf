@@ -39,6 +39,13 @@
 			<trans-unit id="tx_qxsurvey_domain_model_user.email">
 				<source>Email</source>
 			</trans-unit>
+
+			<trans-unit id="flexform.pi1.data">
+				<source>Daten</source>
+			</trans-unit>
+			<trans-unit id="flexform.pi1.question">
+				<source>Frage</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

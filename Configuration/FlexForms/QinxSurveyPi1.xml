@@ -1,19 +1,21 @@
 <T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
 	<sheets>
 		<sDEF>
 			<ROOT>
 				<TCEforms>
-					<label>LLL:EXT:fc_products/Resources/Private/Language/locallang_db.xlf:flexform.pi1.view</label>
+					<sheetTitle>LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:flexform.pi1.data</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<settings.category>
 						<TCEforms>
-							<label>LLL:EXT:fc_products/Resources/Private/Language/locallang_db.xlf:flexform.pi1.category</label>
-							<onChange>reload</onChange>
+							<label>LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:flexform.pi1.question</label>
 							<config>
 								<type>select</type>
-								<itemsProcFunc>Fc\FcProducts\Utility\FlexformUtility->getCategories</itemsProcFunc>
+								<itemsProcFunc>Qinx\Qxsurvey\Utilities\FlexformUtility->getQuestions</itemsProcFunc>
 							</config>
 						</TCEforms>
 					</settings.category>

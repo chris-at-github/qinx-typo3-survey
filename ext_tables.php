@@ -9,6 +9,9 @@ if (!defined('TYPO3_MODE')) {
 	'Qinx Survey'
 );
 
+$TCA['tt_content']['types']['list']['subtypes_addlist']['qxsurvey_pi1'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('qxsurvey_pi1', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/QinxSurveyPi1.xml');
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Qinx Survey');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_qxsurvey_domain_model_question', 'EXT:qxsurvey/Resources/Private/Language/locallang_csh_tx_qxsurvey_domain_model_question.xlf');
