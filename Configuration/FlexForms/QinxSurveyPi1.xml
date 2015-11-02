@@ -10,7 +10,7 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
-					<settings.category>
+					<settings.question>
 						<TCEforms>
 							<label>LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:flexform.pi1.question</label>
 							<config>
@@ -18,7 +18,7 @@
 								<itemsProcFunc>Qinx\Qxsurvey\Utilities\FlexformUtility->getQuestions</itemsProcFunc>
 							</config>
 						</TCEforms>
-					</settings.category>
+					</settings.question>
 				</el>
 			</ROOT>
 		</sDEF>
