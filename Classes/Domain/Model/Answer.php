@@ -69,10 +69,11 @@ class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Sets the choice
 	 * 
 	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choice
-	 * @return void
+	 * @return \Qinx\Qxsurvey\Domain\Model\Answer
 	 */
 	public function setChoice(\Qinx\Qxsurvey\Domain\Model\Choice $choice) {
 		$this->choice = $choice;
+		return $this;
 	}
 
 	/**
@@ -88,10 +89,11 @@ class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Sets the question
 	 * 
 	 * @param \Qinx\Qxsurvey\Domain\Model\Question $question
-	 * @return void
+	 * @return \Qinx\Qxsurvey\Domain\Model\Answer
 	 */
 	public function setQuestion(\Qinx\Qxsurvey\Domain\Model\Question $question) {
 		$this->question = $question;
+		return $this;
 	}
 
 	/**
@@ -107,10 +109,11 @@ class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Sets the user
 	 * 
 	 * @param \Qinx\Qxsurvey\Domain\Model\User $user
-	 * @return void
+	 * @return \Qinx\Qxsurvey\Domain\Model\Answer
 	 */
 	public function setUser(\Qinx\Qxsurvey\Domain\Model\User $user) {
 		$this->user = $user;
+		return $this;
 	}
 
 }
