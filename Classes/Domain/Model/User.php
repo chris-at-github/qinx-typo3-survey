@@ -36,6 +36,7 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * email
 	 * 
 	 * @var string
+	 * @validate NotEmpty
 	 */
 	protected $email = '';
 
