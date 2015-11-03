@@ -47,6 +47,26 @@ class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $namespace = '';
 
 	/**
+	 * objectManager
+	 *
+	 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
+	 */
+	protected $objectManager;
+
+	/**
+	 * return an instance of objectManager
+	 *
+	 * @return \TYPO3\CMS\Extbase\Object\ObjectManager
+	 */
+	public function getObjectManager() {
+		if(($this->objectManager instanceof \TYPO3\CMS\Extbase\Object\ObjectManager) === false) {
+			$this->objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+		}
+
+		return $this->objectManager;
+	}
+
+	/**
 	 * Returns the name
 	 * 
 	 * @return string $name
@@ -84,4 +104,17 @@ class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->namespace = $namespace;
 	}
 
+	/**
+	 * Returns the number of answers for this choice
+	 *
+	 * @return int
+	 */
+	public function getAnswerCount() {
+		$repository = $this->getObjectManager()->get('Qinx\\Qxsurvey\\Domain\\Repository\\ChoiceRepository');
+		$count 			= 0;
+		$repository->findAnswerCount($this);
+
+
+		return $count;
+	}
 }
