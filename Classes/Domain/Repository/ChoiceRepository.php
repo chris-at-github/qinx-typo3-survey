@@ -32,15 +32,31 @@ namespace Qinx\Qxsurvey\Domain\Repository;
 class ChoiceRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 	/**
+	 * Returns the enabled fields for the repository class
+	 *
+	 * @param string table name
+	 * @param string optional alias
+	 * @return string
+	 */
+	public function getEnabledFieldString($table, $alias = null) {
+		$enabledFields = $GLOBALS['TSFE']->sys_page->enableFields($table);
+
+		if($alias !== null) {
+			$enabledFields = str_replace($table, $alias, $enabledFields);
+		}
+
+		return $enabledFields;
+	}
+
+	/**
 	 * Returns the count of answers for this choice
 	 *
-	 * @param int|\Qinx\Qxsurvey\Domain\Model\Choice $uid
+	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $uid
 	 * @return int
 	 */
 	public function findAnswerCount($choice) {
-		$return 	= 0;
-		$matches	= array();
-		$query		= $this->createQuery();
+		$return = 0;
+		$query	= $this->createQuery();
 
 		if($choice instanceof \Qinx\Qxsurvey\Domain\Model\Choice) {
 			$choice = $choice->getUid();
@@ -48,13 +64,16 @@ class ChoiceRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 		$statement = 'SELECT COUNT(a.uid) as total FROM tx_qxsurvey_domain_model_answer AS a
 			WHERE a.choice = ?
-				AND a.pid IN ?
-				AND a.hidden = 0
-				AND a.deleted = 0';
-		$query->statement($statement, array($choice, $query->getQuerySettings()->getStoragePageIds()));
+				AND a.pid IN ?' . $this->getEnabledFieldString('tx_qxsurvey_domain_model_answer', 'a');
 
-		var_dump($query->execute(true));
-//
-//		$query->getQuerySettings()->setReturnRawQueryResult(true);
+		$result = $query
+			->statement($statement, array($choice, $query->getQuerySettings()->getStoragePageIds()))
+			->execute(true);
+
+		if(isset($result[0]['total']) === true) {
+			$return = (int) $result[0]['total'];
+		}
+
+		return $return;
 	}
 }

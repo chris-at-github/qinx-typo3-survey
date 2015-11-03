@@ -110,11 +110,6 @@ class Choice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return int
 	 */
 	public function getAnswerCount() {
-		$repository = $this->getObjectManager()->get('Qinx\\Qxsurvey\\Domain\\Repository\\ChoiceRepository');
-		$count 			= 0;
-		$repository->findAnswerCount($this);
-
-
-		return $count;
+		return $this->getObjectManager()->get('Qinx\\Qxsurvey\\Domain\\Repository\\ChoiceRepository')->findAnswerCount($this);
 	}
 }
