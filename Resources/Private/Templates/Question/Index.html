@@ -1,6 +1,11 @@
+{namespace qx=Qinx\Qxsurvey\ViewHelpers}
+
 <f:layout name="Default" />
 
 <f:section name="Main">
+	<qx:flashMessages />
+	<f:render partial="FormValidation" arguments="{namespace: 'qxsurvey'}" />
+
 	<f:if condition="{question}">
 		<f:form action="save" name="question" object="{question}">
 
