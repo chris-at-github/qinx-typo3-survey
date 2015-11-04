@@ -37,6 +37,8 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * 
 	 * @var string
 	 * @validate NotEmpty
+	 * @validate EmailAddress
+	 * @validate \Qinx\Qxsurvey\Validation\Validator\DuplicateValidator
 	 */
 	protected $email = '';
 
