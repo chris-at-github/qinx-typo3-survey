@@ -38,7 +38,16 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @var \Qinx\Qxsurvey\Domain\Repository\QuestionRepository
 	 * @inject
 	 */
-	protected $questionRepository = NULL;
+	protected $questionRepository = null;
+
+	/**
+	 * deactivate error flash messages
+	 *
+	 * @see Tx_Extbase_MVC_Controller_ActionController::getErrorFlashMessage()
+	 */
+	protected function getErrorFlashMessage() {
+		return false;
+	}
 
 	/**
 	 * action index
