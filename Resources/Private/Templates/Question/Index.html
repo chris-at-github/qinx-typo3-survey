@@ -7,17 +7,20 @@
 	<f:render partial="FormValidation" arguments="{namespace: 'qxsurvey'}" />
 
 	<f:if condition="{question}">
-		<f:form action="save" name="question" object="{question}">
+		<f:form action="save" name="answer" object="{answer}">
+			<div>
+				<f:form.hidden property="question" value="{question}" />
+			</div>
 
 			<div class="form-item">
 				<label class="form-label" for="qx-survey-{question.uid}-email">E-Mail:</label>
-				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value=""/>
+				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value="{user.email}"/>
 			</div>
 
 			<f:for each="{question.choices}" as="choice">
 
 				<div class="form-item">
-					<f:form.radio name="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
+					<f:form.radio property="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
 					<label for="qx-survey-{question.uid}-{choice.namespace}">{choice.name} ({choice.answerCount})</label>
 				</div>
 

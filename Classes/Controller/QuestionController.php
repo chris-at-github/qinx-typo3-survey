@@ -54,20 +54,16 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action save
 	 *
-	 * @param \Qinx\Qxsurvey\Domain\Model\Question $question
-	 * @param \Qinx\Qxsurvey\Domain\Model\Choice $choice
+	 * @param \Qinx\Qxsurvey\Domain\Model\Answer $answer
 	 * @param \Qinx\Qxsurvey\Domain\Model\User $user
 	 * @return void
 	 */
-	public function saveAction(\Qinx\Qxsurvey\Domain\Model\Question $question, \Qinx\Qxsurvey\Domain\Model\Choice $choice, \Qinx\Qxsurvey\Domain\Model\User $user) {
+	public function saveAction(\Qinx\Qxsurvey\Domain\Model\Answer $answer, \Qinx\Qxsurvey\Domain\Model\User $user) {
 		$this->objectManager->get('\Qinx\Qxsurvey\Domain\Repository\AnswerRepository')->add(
-			$this->objectManager->get('\Qinx\Qxsurvey\Domain\Model\Answer')
-				->setQuestion($question)
-				->setChoice($choice)
-				->setUser($user)
+			$answer->setUser($user)
 		);
-
-		$this->addFlashMessage('ok');
-		$this->redirect('index');
+//
+//		$this->addFlashMessage('ok');
+//		$this->redirect('index');
  }
 }

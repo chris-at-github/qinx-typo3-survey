@@ -36,6 +36,7 @@ class Answer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * choice
 	 * 
 	 * @var \Qinx\Qxsurvey\Domain\Model\Choice
+	 * @validate NotEmpty
 	 * @lazy
 	 */
 	protected $choice = NULL;
