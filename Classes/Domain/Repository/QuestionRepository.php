@@ -1,7 +1,6 @@
 <?php
 namespace Qinx\Qxsurvey\Domain\Repository;
 
-
 /***************************************************************
  *
  *  Copyright notice
@@ -31,6 +30,4 @@ namespace Qinx\Qxsurvey\Domain\Repository;
  * The repository for Questions
  */
 class QuestionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-
-	
 }
