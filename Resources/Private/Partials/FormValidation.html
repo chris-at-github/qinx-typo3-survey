@@ -4,7 +4,7 @@
 			<ul>
 				<f:for each="{validationResults.flattenedErrors}" as="errors" key="propertyPath">
 					<f:for each="{errors}" as="error">
-						<li><f:translate key="error.{propertyPath}.{error.code}" default="error.{propertyPath}.{error.code}" /></li>
+						<li><f:translate key="message.error.{propertyPath}.{error.code}" default="message.error.{propertyPath}.{error.code}" /></li>
 					</f:for>
 				</f:for>
 			</ul>

@@ -71,8 +71,8 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$this->objectManager->get('\Qinx\Qxsurvey\Domain\Repository\AnswerRepository')->add(
 			$answer->setUser($user)
 		);
-//
-//		$this->addFlashMessage('ok');
-//		$this->redirect('index');
+
+		$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('message.ok.answer', 'Qxsurvey'));
+		$this->redirect('index');
  }
 }
