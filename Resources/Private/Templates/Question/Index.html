@@ -4,7 +4,7 @@
 
 <f:section name="Main">
 	<qx:flashMessages />
-	<f:render partial="FormValidation" arguments="{namespace: 'qxsurvey'}" />
+	<f:render partial="FormValidation" />
 
 	<f:if condition="{question}">
 		<f:form action="save" name="answer" object="{answer}">
@@ -13,21 +13,25 @@
 			</div>
 
 			<div class="form-item">
-				<label class="form-label" for="qx-survey-{question.uid}-email">E-Mail:</label>
-				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value="{user.email}"/>
+				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value="{user.email}" placeholder="E-Mailadresse" />
 			</div>
 
-			<f:for each="{question.choices}" as="choice">
+			<div class="qx-survey--choices">
+				<f:for each="{question.choices}" as="choice">
 
-				<div class="form-item">
-					<f:form.radio property="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
-					<label for="qx-survey-{question.uid}-{choice.namespace}">{choice.name} ({choice.answerCount})</label>
-				</div>
+					<div class="form-item qx-survey--choice-{choice.namespace}">
+						<label for="qx-survey-{question.uid}-{choice.namespace}">
+							<f:form.radio property="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
+							<span class="qx-survey--choice-count">{choice.answerCount}</span>
+							<span class="qx-survey--choice-name">{choice.name}</span>
+						</label>
+					</div>
 
-			</f:for>
+				</f:for>
+			</div>
 
 			<div class="form-actions">
-				<button type="submit">Abschicken</button>
+				<button type="submit" class="button">Abschicken</button>
 			</div>
 		</f:form>
 	</f:if>
