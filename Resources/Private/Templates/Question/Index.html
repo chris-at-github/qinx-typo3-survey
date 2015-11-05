@@ -12,14 +12,14 @@
 				<f:form.hidden property="question" value="{question}" />
 			</div>
 
-			<div class="form-item">
+			<div class="form-item qx-survey--mail">
 				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value="{user.email}" placeholder="E-Mailadresse" />
 			</div>
 
 			<div class="qx-survey--choices">
 				<f:for each="{question.choices}" as="choice">
 
-					<div class="form-item qx-survey--choice-{choice.namespace}">
+					<div class="form-item qx-survey--choice qx-survey--choice-{choice.namespace}">
 						<label for="qx-survey-{question.uid}-{choice.namespace}">
 							<f:form.radio property="choice" value="{choice.uid}" id="qx-survey-{question.uid}-{choice.namespace}"/>
 							<span class="qx-survey--choice-count">{choice.answerCount}</span>
