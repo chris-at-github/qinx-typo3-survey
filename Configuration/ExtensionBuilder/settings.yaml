@@ -42,7 +42,7 @@ overwriteSettings:
     Controller: keep
     Domain:
       Model: merge
-      Repository: merge
+      Repository: keep
 
   Configuration:
     TCA: merge
