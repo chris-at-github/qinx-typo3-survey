@@ -62,16 +62,25 @@ class ChoiceRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 			$choice = $choice->getUid();
 		}
 
-		$statement = 'SELECT COUNT(a.uid) as total FROM tx_qxsurvey_domain_model_answer AS a
-			WHERE a.choice = ?
-				AND a.pid IN ?' . $this->getEnabledFieldString('tx_qxsurvey_domain_model_answer', 'a');
+// kann vorerst nicht mehr in TYPO3 7 verwendet werden
+//		$statement = 'SELECT COUNT(a.uid) as total FROM tx_qxsurvey_domain_model_answer AS a
+//			WHERE a.choice = ?
+//				AND a.pid IN ?' . $this->getEnabledFieldString('tx_qxsurvey_domain_model_answer', 'a');
+//
+//		$result = $query
+//			->statement($statement, array(1))
+//			->execute(true);
 
-		$result = $query
-			->statement($statement, array($choice, $query->getQuerySettings()->getStoragePageIds()))
-			->execute(true);
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery(
+			'COUNT(a.uid) as total',
+			'tx_qxsurvey_domain_model_answer AS a',
+			'a.choice = :uid AND a.pid IN (:pid)' . $this->getEnabledFieldString('tx_qxsurvey_domain_model_answer', 'a'));
+		$statement->execute(array(':uid' => $choice, ':pid' => implode(',', $query->getQuerySettings()->getStoragePageIds())));
 
-		if(isset($result[0]['total']) === true) {
-			$return = (int) $result[0]['total'];
+		$result = $statement->fetch();
+
+		if(isset($result['total']) === true) {
+			$return = (int) $result['total'];
 		}
 
 		return $return;
