@@ -68,7 +68,7 @@ class QuestionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function saveAction(\Qinx\Qxsurvey\Domain\Model\Answer $answer, \Qinx\Qxsurvey\Domain\Model\User $user) {
-		$this->objectManager->get('\Qinx\Qxsurvey\Domain\Repository\AnswerRepository')->add(
+		$this->objectManager->get('Qinx\Qxsurvey\Domain\Repository\AnswerRepository')->add(
 			$answer->setUser($user)
 		);
 

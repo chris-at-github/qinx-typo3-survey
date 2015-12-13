@@ -36,11 +36,18 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * email
 	 * 
 	 * @var string
-	 * @validate NotEmpty
 	 * @validate EmailAddress
 	 * @validate \Qinx\Qxsurvey\Validation\Validator\DuplicateValidator
 	 */
 	protected $email = '';
+
+	/**
+	 * email
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $name = '';
 
 	/**
 	 * Returns the email
@@ -61,4 +68,22 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->email = $email;
 	}
 
+	/**
+	 * Returns the name
+	 *
+	 * @return string $name
+	 */
+	public function getName() {
+		return $this->name;
+	}
+
+	/**
+	 * Sets the name
+	 *
+	 * @param string $name
+	 * @return void
+	 */
+	public function setName($name) {
+		$this->name = $name;
+	}
 }

@@ -12,8 +12,8 @@
 				<f:form.hidden property="question" value="{question}" />
 			</div>
 
-			<div class="form-item qx-survey--mail">
-				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[email]" value="{user.email}" placeholder="E-Mailadresse" />
+			<div class="form-item qx-survey--name">
+				<f:form.textfield class="form-field" id="qx-survey-{question.uid}-email" name="user[name]" value="{user.name}" placeholder="{f:translate(key: 'placeholder.name')}" />
 			</div>
 
 			<div class="qx-survey--choices">
@@ -31,7 +31,7 @@
 			</div>
 
 			<div class="form-actions">
-				<button type="submit" class="button">Abschicken</button>
+				<button type="submit" class="button"><f:translate key="actions.submit" /></button>
 			</div>
 		</f:form>
 	</f:if>

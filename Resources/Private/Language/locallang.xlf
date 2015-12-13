@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-11-02T11:29:53Z" product-name="qxsurvey">
 		<header/>
 		<body>
+			<trans-unit id="actions.submit">
+				<source>Send</source>
+			</trans-unit>
+			<trans-unit id="placeholder.name">
+				<source>Your name</source>
+			</trans-unit>
 			<trans-unit id="message.ok.answer">
 				<source>Thank you for your vote</source>
 			</trans-unit>

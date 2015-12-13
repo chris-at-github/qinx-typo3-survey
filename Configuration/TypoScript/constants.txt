@@ -1,4 +1,3 @@
-
 plugin.tx_qxsurvey {
 	view {
 		# cat=plugin.tx_qxsurvey/file; type=string; label=Path to template root (FE)
