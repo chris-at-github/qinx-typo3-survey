@@ -38,7 +38,14 @@ class FlexformUtility {
 			array(0 => '', 1 => 0)
 		);
 
-		$result	= $GLOBALS['TYPO3_DB']->exec_SELECTquery('uid, name', 'tx_qxsurvey_domain_model_question');
+		$GLOBALS['TYPO3_DB']->debugOuput = 2;
+		$GLOBALS['TYPO3_DB']->store_lastBuiltQuery = true;
+
+		$result	= $GLOBALS['TYPO3_DB']->exec_SELECTquery(
+			'uid, name',
+			'tx_qxsurvey_domain_model_question',
+			'1 = 1' . \TYPO3\CMS\Backend\Utility\BackendUtility::deleteClause('tx_qxsurvey_domain_model_question')
+		);
 
 		if($GLOBALS['TYPO3_DB']->sql_num_rows($result)) {
 			while($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($result)){
