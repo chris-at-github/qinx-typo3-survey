@@ -39,7 +39,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_question'] = array(
 		),
 		'searchFields' => 'name,choices,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Question.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_question.gif'
+		'iconfile' => 'EXT:qxsurvey/Resources/Public/Icons/tx_qxsurvey_domain_model_question.gif'
 	),
 );
 
@@ -68,7 +68,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_answer'] = array(
 		),
 		'searchFields' => 'choice,question,user,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Answer.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_answer.gif'
+		'iconfile' => 'EXT:qxsurvey/Resources/Public/Icons/tx_qxsurvey_domain_model_answer.gif'
 	),
 );
 
@@ -97,7 +97,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 		),
 		'searchFields' => 'name,namespace,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Choice.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_choice.gif'
+		'iconfile' => 'EXT:qxsurvey/Resources/Public/Icons/tx_qxsurvey_domain_model_choice.gif'
 	),
 );
 
@@ -126,6 +126,6 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_user'] = array(
 		),
 		'searchFields' => 'email,name,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/User.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_qxsurvey_domain_model_user.gif'
+		'iconfile' => 'EXT:qxsurvey/Resources/Public/Icons/tx_qxsurvey_domain_model_user.gif'
 	),
 );
