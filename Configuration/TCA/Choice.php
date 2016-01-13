@@ -21,6 +21,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
 			'config' => array(
 				'type' => 'select',
+				'renderType' => 'selectSingle',
 				'foreign_table' => 'sys_language',
 				'foreign_table_where' => 'ORDER BY sys_language.title',
 				'items' => array(
@@ -35,6 +36,7 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
 			'config' => array(
 				'type' => 'select',
+				'renderType' => 'selectSingle',
 				'items' => array(
 					array('', 0),
 				),
@@ -96,7 +98,6 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 				),
 			),
 		),
-
 		'name' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:qxsurvey/Resources/Private/Language/locallang_db.xlf:tx_qxsurvey_domain_model_choice.name',
@@ -115,7 +116,6 @@ $GLOBALS['TCA']['tx_qxsurvey_domain_model_choice'] = array(
 				'eval' => 'trim'
 			),
 		),
-		
 		'question' => array(
 			'config' => array(
 				'type' => 'passthrough',
